@@ -14,12 +14,12 @@
 ### Installation
 0. Ensure that PHP, MySQL (via XAMPP), and Composer are installed on your system:
    - Download XAMPP <a href="https://www.apachefriends.org/download.html" target="_blank">here</a>.
-   - Download composer <a href="https://getcomposer.org/Composer-Setup.exe target="_blank">here</a>.
-1. Clone the project repository (or alternatively, download the ZIP file of the repository):
+   - Download composer <a href="https://getcomposer.org/Composer-Setup.exe" target="_blank">here</a>.
+1. Clone the project repository (or alternatively, download the ZIP file of the repository):<br>
    `git clone https://github.com/randiPalguna/DishDiary.git`
-2. Navigate to the DishDiary project directory:
+2. Navigate to the DishDiary project directory:<br>
    `cd .\DishDiary\`
-3. Run the setup_project.bat file and follow the on-screen instructions to complete the laravel setup.
+3. Run the setup_project.bat file and follow the on-screen instructions to complete the laravel setup.<br>
    `.\setup_project.bat`
 > **NOTE:** This project is designed to run on Windows and should be executed in PowerShell.
 
