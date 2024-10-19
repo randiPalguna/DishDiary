@@ -12,7 +12,8 @@
 <br>
 
 ## Team Members
-| Name                       | NRP        | Course    | Contributions |
+| Name                       | NRP        | Course              | Contributions |
+| ---                        | ---        | ---                 | ---           |
 | Randi Palguna Artayasa     | 5025231020 | Web Programming (F) | % |
 | I Gusti Ngurah Arya Sudewa | 5025231030 | Web Programming (F) | % |
 | Muhammad Daffa Nurrahman   | 5025231208 | Web Programming (F) | % |
