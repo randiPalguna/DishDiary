@@ -31,7 +31,7 @@ This application provides users with a comprehensive recipe management system, a
 4. Delete Recipes: Users have the option to remove recipes they no longer need.
 5. ...
 
-
+<br><br>
 ## Design
 
 ### Database Design
@@ -40,7 +40,7 @@ This application provides users with a comprehensive recipe management system, a
 ### UI Design
 ...
 
-
+<br><br>
 ## Implementation
 This project is implemented using the Laravel framework. The core functionality of the application is based on the CRUD (Create, Read, Update, Delete) concept, allowing users to manage recipes efficiently.
 
@@ -49,14 +49,14 @@ Key technologies and tools used:
 - MySQL: The database system used to store and manage all recipe-related data, including user inputs and categories.
 - XAMPP: A local development environment that includes Apache and MySQL, facilitating easy setup and testing of the application.
 
-
+<br><br>
 ## Testing
 ...
 
-
+<br><br>
 ## Deployment
 ...
 
-
+<br><br>
 ## Conclusion and Improvement
 ...
