@@ -9,12 +9,14 @@
 
 <h1 align="center">DishDiary</h1>
 
+<br>
 ## Requirements
 
 ### Installation
 0. Ensure that PHP, MySQL (via XAMPP), and Composer are installed on your system:
    - Download XAMPP <a href="https://www.apachefriends.org/download.html" target="_blank">here</a>.
    - Download composer <a href="https://getcomposer.org/Composer-Setup.exe" target="_blank">here</a>. However, you must first install XAMPP and set the PHP path in the environment variables before installing composer.
+   - Check if PHP and Composer are already installed by executing the commands php -v and composer --version in PowerShell.
 1. Clone the project repository (or alternatively, download the ZIP file of the repository):<br>
    `git clone https://github.com/randiPalguna/DishDiary.git`
 2. Navigate to the DishDiary project directory:<br>
