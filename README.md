@@ -18,6 +18,11 @@
 | I Gusti Ngurah Arya Sudewa | 5025231030 | Web Programming (F) | % |
 | Muhammad Daffa Nurrahman   | 5025231208 | Web Programming (F) | % |
 
+<br> 
+
+## Projects Goal Lists
+<a href="https://list2go.io/en/list/-O9_-WEf6HI6P26MifTM" target="_blank">List2Go</a>
+
 <br><br>
 
 ## Requirements
