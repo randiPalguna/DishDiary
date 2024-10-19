@@ -20,9 +20,9 @@
 
 <br> 
 
-## Projects Goal Lists
-<a href="https://list2go.io/en/list/-O9_-WEf6HI6P26MifTM" target="_blank">List2Go</a>
-
+## Projects Goal Lists and Project Architecture
+- <a href="https://list2go.io/en/list/-O9_-WEf6HI6P26MifTM" target="_blank">List2Go</a>
+- <a href="https://miro.com/welcomeonboard/WU04dm9Xc0JjdUxCVDBhUDhlNGdsT0hVWXd3ZUJuQnRPRFllSlNzcHhqTTd2WXVYaGVxY2o3YmR3azR4YXVtd3wzNDU4NzY0NTg3MTMzNzk1Njc3fDI=?share_link_id=230823000814 target="_blank">miro</a>
 <br><br>
 
 ## Requirements
