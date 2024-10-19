@@ -8,7 +8,8 @@ IF %ERRORLEVEL% NEQ 0 (
 )
  
 echo ===============================================================================================
- 
+
+:: Check composer version
 call composer --version
 IF %ERRORLEVEL% NEQ 0 (
     echo "composer is not installed or not available globally. Please install composer or add it to your PATH."
