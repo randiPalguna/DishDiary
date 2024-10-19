@@ -7,60 +7,56 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# DishDiary
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Requirements
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Installation
+0. Ensure that PHP, MySQL (via XAMPP), and Composer are installed on your system:
+   - Download XAMPP <a href="https://www.apachefriends.org/download.html" target="_blank">here</a>.
+   - Download composer <a href="https://getcomposer.org/Composer-Setup.exe target="_blank">here</a>.
+1. Clone the project repository (or alternatively, download the ZIP file of the repository):
+   `git clone https://github.com/randiPalguna/DishDiary.git`
+2. Navigate to the DishDiary project directory:
+   `cd .\DishDiary\`
+3. Run the setup_project.bat file and follow the on-screen instructions to complete the laravel setup.
+   `.\setup_project.bat`
+> **NOTE:** This project is designed to run on Windows and should be executed in PowerShell.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### App Features
+This application provides users with a comprehensive recipe management system, allowing them to create, update, and explore a wide variety of dishes. Below are the key features available:
+1. Create Recipes: Users can add their own recipes with ingredients, instructions, and images.
+2. View Recipe List: Browse through the full list of available recipes.
+3. Update Recipes: Existing recipes can be easily edited to reflect changes or improvements.
+4. Delete Recipes: Users have the option to remove recipes they no longer need.
+5. ...
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Design
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Database Design
+...
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### UI Design
+...
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Implementation
+This project is implemented using the Laravel framework. The core functionality of the application is based on the CRUD (Create, Read, Update, Delete) concept, allowing users to manage recipes efficiently.
 
-### Premium Partners
+Key technologies and tools used:
+- Laravel: A powerful PHP framework used for building the core application, handling routes, and providing an MVC structure.
+- MySQL: The database system used to store and manage all recipe-related data, including user inputs and categories.
+- XAMPP: A local development environment that includes Apache and MySQL, facilitating easy setup and testing of the application.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+## Testing
+...
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Deployment
+...
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Conclusion and Improvement
+...

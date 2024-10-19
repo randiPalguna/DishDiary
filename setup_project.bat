@@ -47,8 +47,8 @@ IF %ERRORLEVEL% NEQ 0 (
  
 echo ===============================================================================================
  
-:: Prompt user to start XAMPP
-echo "Please start XAMPP and activate Apache and MySQL."
+:: Prompt user to open XAMPP
+echo "Please open XAMPP and activate Apache and MySQL."
 pause
  
 echo ===============================================================================================
