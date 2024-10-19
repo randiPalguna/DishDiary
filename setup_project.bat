@@ -15,9 +15,6 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b
 )
 
-:: Navigate to the project directory
-cd DishDiary
-
 :: Run Composer update
 echo "Updating Composer dependencies..."
 composer update
