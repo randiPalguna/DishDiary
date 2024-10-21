@@ -18,6 +18,7 @@
 | I Gusti Ngurah Arya Sudewa | 5025231030 | Web Programming (F) | % |
 | Muhammad Daffa Nurrahman   | 5025231208 | Web Programming (F) | % |
 
+<br>
 
 ## Projects Goal Lists and Project Architecture
 - <a href="https://list2go.io/en/list/-O9_-WEf6HI6P26MifTM" target="_blank">List2Go</a>
@@ -54,7 +55,11 @@ This application provides users with a comprehensive recipe management system, a
 ## Design
 
 ### Database Design
-...
+- Conceptual Data Model (CDM)
+  ![Screenshot 2024-10-21 142050](https://github.com/user-attachments/assets/ed567b90-2824-40c1-90bf-ecdcb1df76f4)
+
+- MySQL Physical Data Model (PDM)
+
 
 ### UI Design
 ...
