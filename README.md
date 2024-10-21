@@ -60,7 +60,7 @@ This application provides users with a comprehensive recipe management system, a
   > Source: https://pastebin.com/aEwev0rf & https://dbdiagram.io/d
 
 - MySQL Physical Data Model (PDM):
-  ...
+  ![image](https://github.com/user-attachments/assets/05ad499b-8773-4ad3-bba7-300feac6c86d)
 
 <br>
 
