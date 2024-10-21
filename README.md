@@ -55,11 +55,14 @@ This application provides users with a comprehensive recipe management system, a
 ## Design
 
 ### Database Design
-- Conceptual Data Model (CDM)
-  ![Screenshot 2024-10-21 142050](https://github.com/user-attachments/assets/ed567b90-2824-40c1-90bf-ecdcb1df76f4)
+- Conceptual Data Model (CDM):
+  ![image](https://github.com/user-attachments/assets/40e8e0b6-1c51-4f4e-ae0e-579688331ecb)
+  > Source: https://pastebin.com/aEwev0rf & https://dbdiagram.io/d
 
-- MySQL Physical Data Model (PDM)
+- MySQL Physical Data Model (PDM):
+  ...
 
+<br>
 
 ### UI Design
 ...
