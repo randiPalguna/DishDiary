@@ -7,6 +7,14 @@
 </head>
 <body>
   <div>
+    <!-- Add a search form -->
+    <form method="GET" action="{{ route('recipe.index') }}">
+      <input type="text" name="search" placeholder="Search by title" value="{{ request('search') }}">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div>
     <table border="1">
       <tr>
         <th>ID</th>

@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 
 class RecipeController extends Controller
 {
-  public function index() {
-    $recipes = Recipe::all();
-    return view('recipes.index', ['recipes' => $recipes]);
+  public function index(Request $request) {
+    $search = $request->query('search');
+
+    if ($search) {
+        $recipes = Recipe::where('title', 'like', '%' . $search . '%')->get();
+    } else {
+        $recipes = Recipe::all();
+    }
+
+    return view('recipes.index', compact('recipes'));
   }
 
   public function create() {
