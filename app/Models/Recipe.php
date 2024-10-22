@@ -13,4 +13,12 @@ class Recipe extends Model
     {
         return $this->hasOne(SavedRecipe::class, 'recipe_id');
     }
+    
+    protected $fillable = [
+        'image',
+        'title',
+        'ingredients',
+        'instruction',
+        'uptoves'
+    ];
 }
