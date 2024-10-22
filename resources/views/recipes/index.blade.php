@@ -29,7 +29,7 @@
             <a href="{{ route('recipe.edit', ['recipe' => $recipe]) }}">Edit</a>
           </td>
           <td>
-           <form action="{{ route('recipe.incrementUptoves', ['recipe' => $recipe]) }}" method="POST" style="display:inline;">
+            <form action="{{ route('recipe.incrementUptoves', ['recipe' => $recipe]) }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit">Increment Uptoves</button>
             </form>
@@ -47,9 +47,17 @@
   </div>
 
   <div>
-  <p>
-  Make a new recipe <a href="/recipe/create">here</a>.
-  </p>
+    <p>
+      Make a new recipe <a href="/recipe/create">here</a>.
+    </p>
   </div>
+
+  <div>
+    <form method="POST" action="{{ route('logout') }}">
+      @csrf
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+
 </body>
 </html>
