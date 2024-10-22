@@ -20,16 +20,16 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/recipe', [RecipeController::class, 'index'])->name('recipe.index');
+Route::get('/recipe', [RecipeController::class, 'index'])->name('recipe.index')->middleware(['auth', 'verified']);
 
-Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create');
+Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create')->middleware(['auth', 'verified']);
 
-Route::post('/recipe', [RecipeController::class, 'store'])->name('recipe.store');
+Route::post('/recipe', [RecipeController::class, 'store'])->name('recipe.store')->middleware(['auth', 'verified']);
 
-Route::get('/recipe/{recipe}/edit', [RecipeController::class, 'edit'])->name('recipe.edit');
+Route::get('/recipe/{recipe}/edit', [RecipeController::class, 'edit'])->name('recipe.edit')->middleware(['auth', 'verified']);
 
-Route::put('/recipe/{recipe}/update', [RecipeController::class, 'update'])->name('recipe.update');
+Route::put('/recipe/{recipe}/update', [RecipeController::class, 'update'])->name('recipe.update')->middleware(['auth', 'verified']);
 
-Route::post('/recipe/{recipe}/increment-uptoves', [RecipeController::class, 'incrementUptoves'])->name('recipe.incrementUptoves');
+Route::post('/recipe/{recipe}/increment-uptoves', [RecipeController::class, 'incrementUptoves'])->name('recipe.incrementUptoves')->middleware(['auth', 'verified']);
 
-Route::delete('/recipe/{recipe}/destroy', [RecipeController::class, 'destroy'])->name('recipe.destroy');
+Route::delete('/recipe/{recipe}/destroy', [RecipeController::class, 'destroy'])->name('recipe.destroy')->middleware(['auth', 'verified']);

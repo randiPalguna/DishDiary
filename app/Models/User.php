@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\SavedRecipe;
+use App\Models\Recipe;
 
 class User extends Authenticatable
 {
@@ -42,15 +43,15 @@ class User extends Authenticatable
      */
     protected function casts(): array
     {
-        return [
+        return [    
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
     }
 
-    // A user has many SavedRecipe and the SavedRecipe belongs to the user
-    public function saved_recipes(): HasMany
+    public function bookmarkedRecipes(): BelongsToMany
     {
-        return $this->hasMany(SavedRecipe::class, 'user_id');
-    }
+        return $this->belongsToMany(Recipe::class, 'saved_recipes', 'user_id', 'recipe_id')
+                    ->withTimestamps();  // If you have timestamps in the pivot table
+    }   
 }
