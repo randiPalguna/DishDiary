@@ -28,4 +28,26 @@ class RecipeController extends Controller
 
     return redirect(route('recipe.index'));
   }
+
+  public function edit(Recipe $recipe) {
+    return view('recipes.edit', ['recipe' => $recipe]);
+  }
+
+  public function update(Recipe $recipe, Request $request) {
+    $data = $request->validate([
+      'title' => 'required',
+      'image' => 'required',
+      'ingredients' => 'required',
+      'instructions' => 'required'
+    ]);
+    $recipe->update($data);
+
+    return redirect(route('recipe.index'))->with('success', 'Recipe Updated Successfully');
+  }
+
+    public function incrementUptoves(Recipe $recipe) {
+        $recipe->increment('uptoves');
+
+        return redirect(route('recipe.index'))->with('success', 'Uptoves incremented successfully!');
+    }
 }
