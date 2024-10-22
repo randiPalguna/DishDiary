@@ -12,12 +12,12 @@ class SavedRecipe extends Model
     // A Recipe has one SavedRecipe and the SavedRecipe belongs to the Recipe
     public function recipe(): BelongsTo
     {
-        return $this->belongsTo(Recipe::class, 'id');
+        return $this->belongsTo(Recipe::class, 'user-id');
     }
 
     // A user has many SavedRecipe and the SavedRecipe belongs to the user
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'id');
+        return $this->belongsTo(User::class, 'user-id');
     }
 }

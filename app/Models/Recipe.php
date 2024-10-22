@@ -12,5 +12,5 @@ class Recipe extends Model
     public function saved_recipe(): HasOne
     {
         return $this->hasOne(SavedRecipe::class, 'recipe_id');
-    }    
+    }
 }
