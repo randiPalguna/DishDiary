@@ -45,9 +45,13 @@ class RecipeController extends Controller
     return redirect(route('recipe.index'))->with('success', 'Recipe Updated Successfully');
   }
 
-    public function incrementUptoves(Recipe $recipe) {
-        $recipe->increment('uptoves');
-
-        return redirect(route('recipe.index'))->with('success', 'Uptoves incremented successfully!');
-    }
+  public function incrementUptoves(Recipe $recipe) {
+     $recipe->increment('uptoves');
+     return redirect(route('recipe.index'))->with('success', 'Uptoves incremented successfully!');
+  }
+  
+  public function destroy(Recipe $recipe) {
+    $recipe->delete();
+    return redirect(route('recipe.index'))->with('success', 'Recipe Deleted Successfully');
+  }
 }

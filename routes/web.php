@@ -18,3 +18,5 @@ Route::get('/recipe/{recipe}/edit', [RecipeController::class, 'edit'])->name('re
 Route::put('/recipe/{recipe}/update', [RecipeController::class, 'update'])->name('recipe.update');
 
 Route::post('/recipe/{recipe}/increment-uptoves', [RecipeController::class, 'incrementUptoves'])->name('recipe.incrementUptoves');
+
+Route::delete('/recipe/{recipe}/destroy', [RecipeController::class, 'destroy'])->name('recipe.destroy');

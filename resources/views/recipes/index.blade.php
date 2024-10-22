@@ -34,6 +34,13 @@
                 <button type="submit">Increment Uptoves</button>
             </form>
           </td>
+          <td>
+            <form method="post" action="{{route('recipe.destroy', ['recipe' => $recipe])}}">
+              @csrf
+              @method('delete')
+              <input type="submit" value="Delete" />
+            </form>
+          </td>
         </tr>
       @endforeach
     </table>
