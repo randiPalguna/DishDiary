@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Recipe;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
@@ -53,5 +54,26 @@ class RecipeController extends Controller
   public function destroy(Recipe $recipe) {
     $recipe->delete();
     return redirect(route('recipe.index'))->with('success', 'Recipe Deleted Successfully');
+  }
+
+  public function bookmark(Request $request, Recipe $recipe) {
+    $user = auth()->user();
+    if (!$user->bookmarkedRecipes()->where('recipe_id', $recipe->id)->exists()) {
+        $user->bookmarkedRecipes()->attach($recipe->id);
+    }
+    return redirect()->back()->with('success', 'Recipe bookmarked!');
+  }
+
+  public function unbookmark(Request $request, Recipe $recipe) {
+    $user = auth()->user();
+    $user->bookmarkedRecipes()->detach($recipe->id);
+    return redirect()->back()->with('success', 'Recipe unbookmarked!');
+  }
+
+  public function bookmarkedRecipes() {
+    $user = auth()->user();
+    $bookmarkedRecipes = $user->bookmarkedRecipes()->get();
+
+    return view('recipes.bookmarked', ['bookmarkedRecipes' => $bookmarkedRecipes]);
   }
 }

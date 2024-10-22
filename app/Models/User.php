@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Models\SavedRecipe;
 use App\Models\Recipe;
 
@@ -51,7 +51,6 @@ class User extends Authenticatable
 
     public function bookmarkedRecipes(): BelongsToMany
     {
-        return $this->belongsToMany(Recipe::class, 'saved_recipes', 'user_id', 'recipe_id')
-                    ->withTimestamps();  // If you have timestamps in the pivot table
+        return $this->belongsToMany(Recipe::class, 'saved_recipes', 'user_id', 'recipe_id')->withTimestamps();
     }   
 }
