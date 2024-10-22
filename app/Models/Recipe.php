@@ -15,10 +15,14 @@ class Recipe extends Model
     }
     
     protected $fillable = [
-        'image',
         'title',
+        'image',
         'ingredients',
-        'instruction',
+        'instructions',
         'uptoves'
+    ];
+
+    protected $attributes = [
+        'uptoves' => 0,
     ];
 }

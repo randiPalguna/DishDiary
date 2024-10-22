@@ -13,6 +13,19 @@ class RecipeController extends Controller
   }
 
   public function create() {
-    return view('products.create');
+    return view('recipes.create');
+  }
+
+  public function store(Request $request) { 
+    $data = $request->validate([
+      'title' => 'required',
+      'image' => 'required',
+      'ingredients' => 'required',
+      'instructions' => 'required',
+    ]);
+
+    $newRecipe = Recipe::create($data);
+
+    return redirect(route('recipe.index'));
   }
 }

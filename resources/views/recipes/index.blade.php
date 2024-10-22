@@ -28,5 +28,11 @@
       @endforeach
     </table>
   </div>
+
+  <div>
+  <p>
+  Make a new recipe <a href="/recipe/create">here</a>.
+  </p>
+  </div>
 </body>
 </html>
