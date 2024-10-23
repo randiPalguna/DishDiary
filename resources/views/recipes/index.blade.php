@@ -15,13 +15,14 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #e6f7e5; /* Soft green background */
+            color: #4a4a4a; /* Dark gray text */
             padding: 20px;
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
+            color: #2c5d34; /* Dark green for headers */
         }
         .container {
             max-width: 1200px;
@@ -33,7 +34,7 @@
         }
         .navbar {
             width: 100%;
-            background-color: #007BFF;
+            background-color: #8fbc8f; /* Light green for navbar */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -43,6 +44,7 @@
             align-items: center;
             color: white;
             z-index: 1000;
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
         }
         .navbar a {
             color: white;
@@ -73,14 +75,15 @@
         }
         .create-recipe a {
             padding: 10px 20px;
-            background-color: #28a745;
+            background-color: #6db65d; /* Earthy green */
             color: white;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2rem;
+            transition: background-color 0.3s;
         }
         .create-recipe a:hover {
-            background-color: #218838;
+            background-color: #5aa94e; /* Darker green on hover */
         }
         .card-grid {
             display: flex;
@@ -89,13 +92,17 @@
             justify-content: center;
         }
         .card {
-            background-color: white;
+            background-color: #f0f4f1; /* Light earthy color */
             border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             padding: 20px;
             width: 45%;
             max-width: 500px;
             text-align: center;
+            transition: transform 0.2s; /* Scale effect on hover */
+        }
+        .card:hover {
+            transform: scale(1.02); /* Slightly scale up */
         }
         .card img {
             width: 100%;
@@ -106,9 +113,11 @@
         .card h3 {
             margin: 15px 0;
             font-size: 1.5rem;
+            color: #3c3c3c; /* Darker text color for card titles */
         }
         .card p {
             margin-bottom: 15px;
+            color: #565656; /* Slightly lighter text */
         }
         .card .actions {
             display: flex;
@@ -117,7 +126,7 @@
         }
         .card .btn {
             padding: 10px;
-            background-color: #007BFF;
+            background-color: #007BFF; /* Blue buttons */
             color: white;
             border: none;
             border-radius: 5px;
@@ -125,19 +134,19 @@
             transition: background-color 0.3s;
         }
         .card .btn:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker blue on hover */
         }
         .card .btn-delete {
-            background-color: #dc3545;
+            background-color: #dc3545; /* Red for delete */
         }
         .card .btn-delete:hover {
-            background-color: #c82333;
+            background-color: #c82333; /* Darker red on hover */
         }
         .card .btn-bookmark {
-            background-color: #ffc107;
+            background-color: #ffc107; /* Yellow for bookmark */
         }
         .card .btn-bookmark:hover {
-            background-color: #e0a800;
+            background-color: #e0a800; /* Darker yellow on hover */
         }
         @media (max-width: 768px) {
             .card {

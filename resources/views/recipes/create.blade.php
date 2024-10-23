@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Recipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background-color: #e6f7e5; /* Soft green background */
+            color: #4a4a4a; /* Dark gray text */
             padding: 20px;
         }
         .navbar {
             width: 100%;
-            background-color: #007BFF;
+            background-color: #8fbc8f; /* Light green for navbar */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -23,6 +26,7 @@
             align-items: center;
             color: white;
             z-index: 1000;
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
         }
         .navbar a {
             color: white;
@@ -40,10 +44,12 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
+            color: #2c5d34; /* Dark green for headers */
         }
         label {
             display: block;
             margin-bottom: 5px;
+            font-weight: 600; /* Bold labels */
         }
         input[type="text"], input[type="file"], input[type="submit"] {
             width: 100%;
@@ -53,13 +59,14 @@
             border-radius: 5px;
         }
         input[type="submit"] {
-            background-color: #007BFF;
+            background-color: #6db65d; /* Earthy green */
             color: white;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #5aa94e; /* Darker green on hover */
         }
     </style>
 </head>

@@ -22,7 +22,7 @@
         }
         .image-container {
             flex: 1;
-            background-image: url('https://github.com/randiPalguna/DishDiary/blob/main/resources/images/berserk.jpeg'); /* Add your background image URL */
+            background-image: url('https://raw.githubusercontent.com/randiPalguna/DishDiary/main/resources/images/berserk.jpeg'); /* Corrected background image URL */
             background-size: cover; /* Cover the entire area */
             background-position: center; /* Center the image */
             display: flex;

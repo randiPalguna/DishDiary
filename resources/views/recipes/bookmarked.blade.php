@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmarked Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background-color: #e6f7e5; /* Soft green background */
+            color: #4a4a4a; /* Dark gray text */
             padding: 20px;
         }
         .navbar {
             width: 100%;
-            background-color: #007BFF;
+            background-color: #8fbc8f; /* Light green for navbar */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -23,6 +26,7 @@
             align-items: center;
             color: white;
             z-index: 1000;
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
         }
         .navbar a {
             color: white;
@@ -40,6 +44,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
+            color: #2c5d34; /* Dark green for headers */
         }
         table {
             width: 100%;
@@ -52,38 +57,52 @@
             text-align: left;
         }
         th {
-            background-color: #007BFF;
+            background-color: #8fbc8f; /* Navbar color for headers */
             color: white;
         }
         img {
             max-width: 100px;
+            border-radius: 5px; /* Slightly rounded corners for images */
         }
         .btn {
-            background-color: #007BFF;
+            background-color: #6db65d; /* Earthy green */
             color: white;
             padding: 5px 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #5aa94e; /* Darker green on hover */
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007BFF; /* Blue for link */
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
+<div class="navbar">
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/recipe/bookmark">Bookmarks</a>
-            <img src="profile-photo-placeholder.png" alt="Profile" class="profile-photo" style="border-radius: 50%; width: 40px; height: 40px;">
         </div>
-        <div class="logout">
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="btn btn-delete">Logout</button>
-            </form>
+        <div class="profile-logout">
+            <img src="profile-photo-placeholder.png" alt="Profile" class="profile-photo">
+            <div class="logout">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-delete">Logout</button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -129,9 +148,7 @@
             </table>
         @endif
 
-        <div>
-            <a href="{{ route('recipe.index') }}">Back to All Recipes</a>
-        </div>
+        <a href="{{ route('recipe.index') }}" class="back-link">Back to All Recipes</a>
     </div>
 
 </body>
