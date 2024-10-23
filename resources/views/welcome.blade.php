@@ -15,31 +15,45 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        .image-container {
+            flex: 1;
+            background-image: url('https://github.com/randiPalguna/DishDiary/blob/main/resources/images/berserk.jpeg'); /* Add your background image URL */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the image */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            color: #333;
+            filter: brightness(0.8); /* Darken image slightly for contrast */
         }
-        .container {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 40px;
-            border-radius: 16px;
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+        .login-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(215, 182, 136, 0.9); /* Semi-transparent brown */
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            flex-direction: column; /* Stack elements vertically */
+            height: 100%; /* Full height */
+            color: #333; /* Text color */
+            text-align: center; /* Center text */
         }
-        .container:hover {
-            transform: translateY(-10px);
-        }
+        /* Styles for the login content */
         h1 {
             font-size: 2.2rem;
             font-weight: 600;
-            margin-bottom: 30px;
-            color: #333;
+            margin-bottom: 10px; /* Reduced margin */
+            color: #333; /* Text color */
+        }
+        h2 {
+            font-size: 1.4rem; /* Smaller heading */
+            margin-bottom: 30px; /* Space between h2 and button */
+            color: #333; /* Text color */
         }
         p {
             margin: 20px 0;
@@ -72,25 +86,40 @@
             color: #4b23dd;
         }
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
+            body {
+                flex-direction: column; /* Change to column layout */
+                height: 100vh; /* Full height */
             }
-            .btn {
-                padding: 10px 25px;
-                font-size: 1rem;
+            .image-container {
+                height: 0%; /* Adjust the height as needed */
+                width: 0%;
+            }
+            .login-container {
+                flex: 1; /* Allow it to take up the remaining space */
+                justify-content: center; /* Center content */
+                align-items: center; /* Center content */
+                height: 100%; /* Ensure it fills half of the screen */
+                padding: 200px; /* Ensure padding */
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Login to Your Account</h1>
-        <p>
-            <a href="/login" class="btn">Login</a>
-        </p>
-        <div class="form-footer">
-            <p>Don't have an account? <a href="/register">Register</a></p>
+    <div class="image-container">
+        <!-- Background is now an image -->
+    </div>
+
+    <div class="login-container">
+        <div class="container">
+            <h1>Dish Diary</h1>
+            <h2>Cook dishes of your dreams</h2>
+            <p>
+                <a href="/login" class="btn">Login</a>
+            </p>
+            <div class="form-footer">
+                <p>Don't have an account? <a href="/register">Register</a></p>
+            </div>
         </div>
     </div>
 
