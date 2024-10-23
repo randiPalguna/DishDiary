@@ -10,13 +10,16 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e6f7e5; /* Soft green background */
+            background-color: #f8f4e3; /* Soft beige background */
             color: #4a4a4a; /* Dark gray text */
             padding: 20px;
+            background-image: url('https://raw.githubusercontent.com/randiPalguna/DishDiary/main/resources/images/wood-texture.jpg'); /* Wood texture */
+            background-size: cover; /* Cover the entire area */
+            background-attachment: fixed; /* Fixed background */
         }
         .navbar {
             width: 100%;
-            background-color: #8fbc8f; /* Light green for navbar */
+            background-color: #7a4b3a; /* Dark earthy red for navbar */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -36,7 +39,7 @@
         .container {
             max-width: 600px;
             margin: 80px auto 0;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -44,7 +47,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #2c5d34; /* Dark green for headers */
+            color: #6a4a3c; /* Deep reddish-brown for headers */
         }
         label {
             display: block;
@@ -71,6 +74,7 @@
         img {
             margin-top: 10px; /* Space above the image */
             border-radius: 5px; /* Rounded corners for the image */
+            border: 2px solid #7a4b3a; /* Earthy red border */
         }
     </style>
 </head>

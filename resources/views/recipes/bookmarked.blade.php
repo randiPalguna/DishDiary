@@ -10,13 +10,16 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e6f7e5; /* Soft green background */
+            background-color: #f8f4e3; /* Soft beige background */
             color: #4a4a4a; /* Dark gray text */
             padding: 20px;
+            background-image: url('https://raw.githubusercontent.com/randiPalguna/DishDiary/main/resources/images/wood-texture.jpg'); /* Wood texture */
+            background-size: cover; /* Cover the entire area */
+            background-attachment: fixed; /* Fixed background */
         }
         .navbar {
             width: 100%;
-            background-color: #8fbc8f; /* Light green for navbar */
+            background-color: #7a4b3a; /* Dark earthy red for navbar */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -36,7 +39,7 @@
         .container {
             max-width: 800px;
             margin: 80px auto 0;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -44,7 +47,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #2c5d34; /* Dark green for headers */
+            color: #6a4a3c; /* Deep reddish-brown for headers */
         }
         table {
             width: 100%;
@@ -57,7 +60,7 @@
             text-align: left;
         }
         th {
-            background-color: #8fbc8f; /* Navbar color for headers */
+            background-color: #7a4b3a; /* Navbar color for headers */
             color: white;
         }
         img {
@@ -90,13 +93,13 @@
 </head>
 <body>
 
-<div class="navbar">
+    <div class="navbar">
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/recipe/bookmark">Bookmarks</a>
         </div>
         <div class="profile-logout">
-            <img src="profile-photo-placeholder.png" alt="Profile" class="profile-photo">
+            <img src="profile-photo-placeholder.png" alt="Profile" class="profile-photo" style="border-radius: 50%; width: 40px; height: 40px;">
             <div class="logout">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf

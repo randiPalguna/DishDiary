@@ -15,26 +15,30 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e6f7e5; /* Soft green background */
-            color: #4a4a4a; /* Dark gray text */
+            background-color: #f8f4e3; /* Soft beige background for a vintage feel */
+            color: #5a3e32; /* Dark brown text */
             padding: 20px;
+            background-image: url('https://raw.githubusercontent.com/randiPalguna/DishDiary/main/resources/images/wood-texture.jpg'); /* Wood texture */
+            background-size: cover; /* Cover the entire area */
+            background-attachment: fixed; /* Fixed background */
         }
         h1 {
             text-align: center;
             margin-bottom: 30px;
-            color: #2c5d34; /* Dark green for headers */
+            color: #6a4a3c; /* Deep reddish-brown for headers */
+            font-size: 2.5rem;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
         }
         .navbar {
             width: 100%;
-            background-color: #8fbc8f; /* Light green for navbar */
+            background-color: #7a4b3a; /* Dark earthy red for navbar */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -92,7 +96,7 @@
             justify-content: center;
         }
         .card {
-            background-color: #f0f4f1; /* Light earthy color */
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent for layering */
             border-radius: 10px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -109,6 +113,7 @@
             height: 200px;
             object-fit: cover;
             border-radius: 5px;
+            border: 2px solid #7a4b3a; /* Earthy red border */
         }
         .card h3 {
             margin: 15px 0;
@@ -227,6 +232,6 @@
             @endforeach
         </div>
     </div>
-
+    
 </body>
 </html>
