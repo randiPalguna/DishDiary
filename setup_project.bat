@@ -89,9 +89,36 @@ IF %ERRORLEVEL% NEQ 0 (
     pause
     exit /b
 )
- 
+
 echo ===============================================================================================
- 
+
+echo "Linking storage for image upload..."
+php artisan storage:link
+
+echo ===============================================================================================
+
+:: Download login system
+echo "Downloading package for login system..."
+composer require laravel/breeze --development
+
+echo ===============================================================================================
+
+echo "Downloading breeze for login system. Pick blade and enter and enter"
+pause
+php artisan breeze:install
+
+echo ===============================================================================================
+
+echo "Downloading npm for login system..."
+npm install
+
+echo ===============================================================================================
+
+echo "Fill web.php routes after installing breeze to backupWeb.php"
+type .\routes\backupWeb.php > .\routes\web.php
+
+echo ===============================================================================================
+
 :: Start Laravel development server
 echo "Starting Laravel development server..."
 php artisan serve
@@ -102,7 +129,7 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b
 )
 echo ===============================================================================================
- 
+
 :: Open project in browser
 echo "Opening http://localhost:8000 in your browser..."
 start http://localhost:8000
