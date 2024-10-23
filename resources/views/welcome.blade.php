@@ -22,13 +22,12 @@
         }
         .image-container {
             flex: 1;
-            background-image: url('https://raw.githubusercontent.com/randiPalguna/DishDiary/main/resources/images/berserk.jpeg'); /* Corrected background image URL */
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(215, 182, 136, 1)), url('https://raw.githubusercontent.com/randiPalguna/DishDiary/main/resources/images/fried-brown-rice-12.jpg'); /* Gradient blending with background image */
             background-size: cover; /* Cover the entire area */
             background-position: center; /* Center the image */
             display: flex;
             justify-content: center;
             align-items: center;
-            filter: brightness(0.8); /* Darken image slightly for contrast */
         }
         .login-container {
             flex: 1;
@@ -37,7 +36,6 @@
             align-items: center;
             background-color: rgba(215, 182, 136, 0.9); /* Semi-transparent brown */
             padding: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             flex-direction: column; /* Stack elements vertically */
             height: 100%; /* Full height */
             color: #333; /* Text color */
@@ -62,7 +60,7 @@
             display: inline-block;
             text-decoration: none;
             color: white;
-            background-color: #6c5ce7;
+            background-color: #B8860B;
             padding: 12px 30px;
             border-radius: 30px;
             font-size: 1.1rem;
@@ -77,7 +75,7 @@
             margin-top: 30px;
         }
         a {
-            color: #6c5ce7;
+            color: #B8860B;
             font-weight: 500;
             text-decoration: none;
             transition: color 0.3s;
@@ -85,21 +83,42 @@
         a:hover {
             color: #4b23dd;
         }
+        .menu-line {
+            width: 100%; /* Full width */
+            height: 2px; /* Line height */
+            background-color: #B8860B; /* Line color */
+            margin: 20px 0; /* Space around the line */
+        }
         @media (max-width: 768px) {
             body {
-                flex-direction: column; /* Change to column layout */
+                flex-direction: column; /* Stack image and login container */
                 height: 100vh; /* Full height */
+                overflow: hidden; /* Prevent scrolling */
             }
             .image-container {
-                height: 0%; /* Adjust the height as needed */
-                width: 0%;
+                flex: 1; /* Full height for image */
+                height: 100%; /* Full height */
+                position: relative; /* Positioning context */
             }
             .login-container {
-                flex: 1; /* Allow it to take up the remaining space */
-                justify-content: center; /* Center content */
+                position: absolute; /* Position it over the image */
+                top: 0; /* Start from the top */
+                left: 0; /* Align to the left */
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                display: flex; /* Flex for centering content */
+                flex-direction: column; /* Stack elements vertically */
+                justify-content: center; /* Center content vertically */
                 align-items: center; /* Center content */
-                height: 100%; /* Ensure it fills half of the screen */
-                padding: 200px; /* Ensure padding */
+                padding: 20px; /* Ensure padding */
+                background-color: rgba(215, 182, 136, 0.8); /* More translucent background */
+                z-index: 1; /* Ensure it's on top of the image */
+            }
+            .menu-line {
+                width: 100%; /* Full width */
+                height: 2px; /* Line height */
+                background-color: #B8860B; /* Line color */
+                margin: 20px 0; /* Space around the line */
             }
         }
     </style>
@@ -112,11 +131,13 @@
 
     <div class="login-container">
         <div class="container">
+            <div class="menu-line"></div> <!-- Upper line -->
             <h1>Dish Diary</h1>
-            <h2>Cook dishes of your dreams</h2>
+            <h2>Dear food you gonna be in my mouth</h2>
             <p>
                 <a href="/login" class="btn">Login</a>
             </p>
+            <div class="menu-line"></div> <!-- Lower line -->
             <div class="form-footer">
                 <p>Don't have an account? <a href="/register">Register</a></p>
             </div>
