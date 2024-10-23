@@ -20,10 +20,10 @@ class Recipe extends Model
         'image',
         'ingredients',
         'instructions',
-        'uptoves'
+        'upvotes'
     ];
 
     protected $attributes = [
-        'uptoves' => 0,
+        'upvotes' => 0,
     ];
 }

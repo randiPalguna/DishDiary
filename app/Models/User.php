@@ -52,5 +52,16 @@ class User extends Authenticatable
     public function bookmarkedRecipes(): BelongsToMany
     {
         return $this->belongsToMany(Recipe::class, 'saved_recipes', 'user_id', 'recipe_id')->withTimestamps();
-    }   
+    }
+
+    public function upvotedRecipes()
+    {
+        return $this->belongsToMany(Recipe::class, 'upvotes')->withTimestamps();
+    }
+
+    // Function to check if a user has already upvoted a recipe
+    public function hasUpvoted(Recipe $recipe)
+    {
+        return $this->upvotedRecipes->contains($recipe->id);
+    }
 }

@@ -28,7 +28,7 @@ Route::post('/recipe', [RecipeController::class, 'store'])->name('recipe.store')
 Route::get('/recipe/{recipe}/edit', [RecipeController::class, 'edit'])->name('recipe.edit')->middleware(['auth', 'verified']);
 Route::put('/recipe/{recipe}/update', [RecipeController::class, 'update'])->name('recipe.update')->middleware(['auth', 'verified']);
 
-Route::post('/recipe/{recipe}/increment-uptoves', [RecipeController::class, 'incrementUptoves'])->name('recipe.incrementUptoves')->middleware(['auth', 'verified']);
+Route::post('/recipes/{recipe}/incrementUpvotes', [RecipeController::class, 'incrementUpvotes'])->name('recipe.incrementUpvotes')->middleware(['auth', 'verified']);
 
 Route::delete('/recipe/{recipe}/destroy', [RecipeController::class, 'destroy'])->name('recipe.destroy')->middleware(['auth', 'verified']);
 

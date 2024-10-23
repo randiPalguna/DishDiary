@@ -17,7 +17,7 @@ return new class extends Migration
             $table->String('title');
             $table->String('ingredients');
             $table->String('instructions');
-            $table->Integer('uptoves');
+            $table->Integer('upvotes');
             $table->timestamps();
         });
     }

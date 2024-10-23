@@ -24,18 +24,31 @@ class RecipeController extends Controller
     return view('recipes.create');
   }
 
-  public function store(Request $request) { 
-    $data = $request->validate([
-      'title' => 'required',
-      'image' => 'required',
-      'ingredients' => 'required',
-      'instructions' => 'required',
+  public function store(Request $request) {
+    $request->validate([
+      'title' => 'required|string|max:255',
+      'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // validate image file
+      'ingredients' => 'required|string',
+      'instructions' => 'required|string',
     ]);
 
-    $newRecipe = Recipe::create($data);
+    if ($request->hasFile('image')) {
+      $image = $request->file('image');
+      $imagePath = $image->store('images', 'public');
+    }
 
-    return redirect(route('recipe.index'));
+    $recipe = new Recipe([
+      'title' => $request->input('title'),
+      'image' => $imagePath,  // Store the image path
+      'ingredients' => $request->input('ingredients'),
+      'instructions' => $request->input('instructions'),
+    ]);
+
+    $recipe->save();
+
+    return redirect()->route('recipe.index')->with('success', 'Recipe created successfully!');
   }
+
 
   public function edit(Recipe $recipe) {
     return view('recipes.edit', ['recipe' => $recipe]);
@@ -43,20 +56,42 @@ class RecipeController extends Controller
 
   public function update(Recipe $recipe, Request $request) {
     $data = $request->validate([
-      'title' => 'required',
-      'image' => 'required',
-      'ingredients' => 'required',
-      'instructions' => 'required'
+      'title' => 'required|string|max:255',
+      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+      'ingredients' => 'required|string',
+      'instructions' => 'required|string',
     ]);
+
+    if ($request->hasFile('image')) {
+      if ($recipe->image && \Storage::exists('public/' . $recipe->image)) {
+        \Storage::delete('public/' . $recipe->image);
+      }
+
+      $imagePath = $request->file('image')->store('images', 'public');
+      $data['image'] = $imagePath;
+    }
+
     $recipe->update($data);
 
     return redirect(route('recipe.index'))->with('success', 'Recipe Updated Successfully');
   }
 
-  public function incrementUptoves(Recipe $recipe) {
-     $recipe->increment('uptoves');
-     return redirect(route('recipe.index'))->with('success', 'Uptoves incremented successfully!');
+
+  public function incrementUpvotes(Recipe $recipe) {
+    $user = auth()->user();
+
+    if ($user->hasUpvoted($recipe)) {
+      return redirect()->back()->with('message', 'You have already upvoted this recipe.');
+    }
+
+    $recipe->upvotes += 1;
+    $recipe->save();
+
+    $user->upvotedRecipes()->attach($recipe->id);
+
+    return redirect()->back()->with('message', 'Upvote successful!');
   }
+
   
   public function destroy(Recipe $recipe) {
     $recipe->delete();

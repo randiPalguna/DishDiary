@@ -18,17 +18,23 @@
                 <th>Image</th>
                 <th>Ingredients</th>
                 <th>Instructions</th>
-                <th>Uptoves</th>
+                <th>Upvotes</th>
                 <th>Unbookmark</th>
             </tr>
             @foreach($bookmarkedRecipes as $savedRecipe)
                 <tr>
                     <td>{{ $savedRecipe->id }}</td>
                     <td>{{ $savedRecipe->title }}</td>
-                    <td><img src="{{ $savedRecipe->image }}" alt="{{ $savedRecipe->title }}" width="100"></td>
+                    <td>
+                        @if($savedRecipe->image)
+                            <img src="{{ asset('storage/' . $savedRecipe->image) }}" alt="{{ $savedRecipe->title }}">
+                        @else
+                            <p>No image available</p>
+                        @endif
+                    </td>
                     <td>{{ $savedRecipe->ingredients }}</td>
                     <td>{{ $savedRecipe->instructions }}</td>
-                    <td>{{ $savedRecipe->uptoves }}</td>
+                    <td>{{ $savedRecipe->upvotes }}</td>
                     <td>
                         <form action="{{ route('recipe.unbookmark', ['recipe' => $savedRecipe]) }}" method="POST">
                             @csrf

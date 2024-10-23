@@ -22,8 +22,8 @@
         <th>Image</th>
         <th>Ingredients</th>
         <th>Instructions</th>
-        <th>Uptoves</th>
-        <th>Increment Uptoves</th>
+        <th>Upvotes</th>
+        <th>Increment Upvotes</th>
         <th>Edit</th>
         <th>Bookmark</th>
       </tr>
@@ -31,15 +31,19 @@
         <tr>
           <td>{{$recipe->id}}</td>
           <td>{{$recipe->title}}</td>
-          <td>{{$recipe->image}}</td>
+          <td><img src="{{ asset('storage/' . $recipe->image) }}" alt="{{ $recipe->title }}" width="500px"></td>
           <td>{{$recipe->ingredients}}</td>
           <td>{{$recipe->instructions}}</td>
-          <td>{{$recipe->uptoves}}</td>
+          <td>{{$recipe->upvotes}}</td>
           <td>
-            <form action="{{ route('recipe.incrementUptoves', ['recipe' => $recipe]) }}" method="POST" style="display:inline;">
+            @if(!auth()->user()->hasUpvoted($recipe))
+              <form action="{{ route('recipe.incrementUpvotes', ['recipe' => $recipe]) }}" method="POST" style="display:inline;">
                 @csrf
-                <button type="submit">Increment Uptoves</button>
-            </form>
+                <button type="submit">Increment Upvotes</button>
+              </form>
+            @else
+              <button disabled>Already Upvoted</button>
+            @endif
           </td>
           <td>
             <a href="{{ route('recipe.edit', ['recipe' => $recipe]) }}">Edit</a>
